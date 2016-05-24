@@ -17,9 +17,13 @@ import {Color} from "color";
                     <label class="note" [text]="Message"></label>
                 </StackLayout>
             </material-card> 
-            <material-pull-to-refresh (refresh)="refreshPage($event)">
-                <img [src]="RandomImage" stretch ="none"> 
-            </material-pull-to-refresh>
+            <material-card>
+                <StackLayout class='padding'>
+                    <material-pull-to-refresh (refresh)="refreshPage($event)">
+                        <img [src]="RandomImage" stretch ="none"> 
+                    </material-pull-to-refresh>
+                </StackLayout>
+            </material-card> 
         </StackLayout>
     `,
     directives: [MaterialCard, MaterialPullToRefresh]
@@ -39,27 +43,14 @@ export class RefreshImagePage
     public refreshPage(args: any) {
         console.log("page refresh -> go");
         let control : PullToRefresh = args.object;
-        
-        let randromColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-        
-        let colors = {
-            a : "#FC000D",
-            b : "#19FF01"
-        };
-        control.color = new Color("#000000");
-
-        control.animate({
-            backgroundColor : new Color(randromColor),
-        });
-        
-        control.color = new Color(colors.a);
+                
         setTimeout(() => {
-            args.object.refreshing = false;
+            console.log("end of refresh");
+            //args.object.refreshing = false;
             this.RefreshedTimes += 1;
             this.Message = "Pull to refresh - " + this.RefreshedTimes;
             this.RandomImage = this._randomImage + this.RefreshedTimes;
-            control.color = new Color(colors.b);
-            
+           
             args.completed();
         }, 1000);
     }

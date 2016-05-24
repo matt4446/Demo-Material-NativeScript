@@ -34,6 +34,7 @@ import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/
         </StackLayout>
       </material-card>   
     </StackLayout>
+    
   `
 })
 export class StartPage  {
