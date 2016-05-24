@@ -36,7 +36,8 @@
 		"nativescript-angular": "0.1.1",
 		"tns-core-modules": "2.0.0",
 		"nativescript-cardview": "1.0.1",
-		"nativescript-pulltorefresh": "1.1.4"
+		"nativescript-pulltorefresh": "1.1.4",
+		"nativescript-floatingactionbutton": "2.2.2"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",
