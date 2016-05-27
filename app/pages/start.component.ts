@@ -9,6 +9,9 @@ import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/
   selector: 'Start',
   directives: [MaterialCard, ROUTER_DIRECTIVES, NS_ROUTER_DIRECTIVES],
   template: `
+    <ScrollView>
+        
+    
     <StackLayout class='padding'>
       <material-card>
         <StackLayout class='padding'>
@@ -33,8 +36,18 @@ import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/
           <Button class="button button-positive" text="CardView + pull to refresh"
             [nsRouterLink]="['RefreshPage']"></Button>
         </StackLayout>
-      </material-card>   
+      </material-card>  
+      
+      <material-card>
+        <StackLayout class='padding'>
+          <Label text='Fab'></Label>
+          <Button class="button button-positive" text="Fab"
+            [nsRouterLink]="['FabPage']"></Button>
+        </StackLayout>
+      </material-card>
     </StackLayout>
+    
+    </ScrollView>
   `
 })
 export class StartPage  {

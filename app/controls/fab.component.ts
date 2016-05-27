@@ -11,10 +11,23 @@ registerElement("Fab", () => require("nativescript-floatingactionbutton").Fab);
 @Component({
     selector: "material-fab",
     template:`
-    <Fab  rippleColor="#f1f1f1" class="fab-button"></Fab>
+    <AbsoluteLayout class="fab-container">
+        <StackLayout class="fab-button-content" style="z-index: 1;">
+            <!--<ng-content></ng-content>
+            -->
+            <Label text="face" class="material-icons fab-font" textWrap="true"></Label>
+        </StackLayout>
+    
+        <GridLayout>
+            
+        
+            <Fab rippleColor="#f1f1f1" class="fab-button">
+            </Fab>
+        </GridLayout>
+    </AbsoluteLayout>
     `,
     //outputs: ["tap"]
-    //styleUrls: ["controls/fab.common.css"]
+    styleUrls: ["./controls/fab.common.css"]
 })
 export class MaterialFab {
     

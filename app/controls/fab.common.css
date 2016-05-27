@@ -1,7 +1,29 @@
-.fab-button {
-    height: 70;
-    margin: 15;
-    background-color: #ff4081; 
+.fab-container {
     horizontal-align: right; 
     vertical-align: bottom; 
+}
+
+.fab-font {    
+    font-size: 40;
+    color: #ffffff;
+    text-align: center;
+    horizontal-align: center; 
+    vertical-align: center; 
+    
+    height: 50;
+    width: 50;
+    margin: 15;
+    padding-top: 4;
+}
+
+.fab-button {
+    background-color: #ff4081; 
+    
+    height: 50;
+    width: 50;
+    margin: 15;
+}
+.fab-button-content {
+    horizontal-align: center; 
+    vertical-align: center; 
 }
