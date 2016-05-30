@@ -1,6 +1,4 @@
 import {Component} from "@angular/core"
-import {MaterialCard} from "../controls/card.component";
-import {MaterialPullToRefresh} from "../controls/pullToRefresh.component";
 import {Image} from "ui/image";
 import {PullToRefresh} from "nativescript-pulltorefresh";
 import {Color} from "color";
@@ -14,7 +12,7 @@ import {MATERIAL_DIRECTIVES} from "../controls/material";
             <StackLayout class="padding">
                 <material-card>
                     <StackLayout class='padding'>
-                        <Label text='pull down on the image'></Label>
+                        <Label text='Pull down on the image'></Label>
                         <label class="note" [text]="Message"></label>
                     </StackLayout>
                 </material-card> 

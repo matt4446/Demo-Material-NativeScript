@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {MaterialCard} from "../controls/card.component";
+import {MATERIAL_DIRECTIVES} from "../controls/material";
 import {MaterialPullToRefresh} from "../controls/pullToRefresh.component";
 @Component({
   selector: 'Start',
-  directives: [MaterialCard, MaterialPullToRefresh],
+  directives: [MATERIAL_DIRECTIVES],
   template: `
     <StackLayout class='padding'>
       <material-card>

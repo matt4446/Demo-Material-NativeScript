@@ -1,0 +1,17 @@
+.cardview-image-heading{
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+.cardview-image-title {
+    font-size: 32;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+.cardview-image-sub-title {
+    font-size: 24;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}

@@ -1,6 +1,4 @@
 import {Component} from "@angular/core"
-import {MaterialCard} from "../controls/card.component";
-import {MaterialPullToRefresh} from "../controls/pullToRefresh.component";
 import {Image} from "ui/image";
 import {PullToRefresh} from "nativescript-pulltorefresh";
 import {MATERIAL_DIRECTIVES} from "../controls/material";
@@ -13,7 +11,7 @@ import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES, ComponentInstr
         <ScrollView>
             <StackLayout>
                 <GridLayout rows="*">
-                    <StackLayout>
+                    <StackLayout class="padding">
                         <material-card>
                             <StackLayout class='padding'>
                                 <Label text="home face alarm" class="material-icons" textWrap="true"></Label>

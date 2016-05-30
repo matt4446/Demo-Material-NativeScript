@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {MaterialCard} from "../controls/card.component";
 import {MaterialFab} from "../controls/fab.component";
 //import {MaterialFab} from "../controls/fab.component";
 import {ROUTER_DIRECTIVES, Router, OnActivate, OnDeactivate, CanReuse, OnReuse,
@@ -16,32 +15,26 @@ import {HomeFab} from "./templates/home-fab";
         <StackLayout class='padding'>
         
           <material-card>
-            <StackLayout class='padding'>
-              <Label text='Card View'></Label>
-              <Button class="button button-positive" text="CardView"
-                [nsRouterLink]="['VanillaCardview']"
-              ></Button>
-            </StackLayout>
             
-            <StackLayout class='padding'>
-              <Label text='Pull To Refresh'></Label>
-              <Button class="button button-positive" text="Pull to refresh"
+            <Button class="button button-positive" text="CardView"
+                [nsRouterLink]="['VanillaCardview']"></Button>
+                
+            <Button class="button button-positive" text="Pull to refresh"
                 [nsRouterLink]="['VanillaPullToRefresh']"></Button>
-            </StackLayout>
-            
-            <StackLayout class='padding'>
-              <Label text='Both! Refresh image + animation'></Label>
-              <Button class="button button-positive" text="CardView + pull to refresh"
-                [nsRouterLink]="['RefreshPage']"></Button>
-            </StackLayout>
-            
-            <StackLayout class='padding'>
-              <Label text='Fab'></Label>
-              <Button class="button button-positive" text="Fab"
-                [nsRouterLink]="['FabPage']"></Button>
-            </StackLayout>
-          </material-card> 
 
+            <Button class="button button-positive" text="CardView + pull to refresh"
+              [nsRouterLink]="['RefreshPage']"></Button>
+      
+            <Button class="button button-positive" text="Fabs with material icons"
+              [nsRouterLink]="['FabPage']"></Button>
+            
+          </material-card> 
+          <material-card>
+            <StackLayout class="padding">
+              <Label text="Material icons" textWrap="true"></Label>
+              <Label text="home face alarm" class="material-icons" textWrap="true"></Label>    
+            </StackLayout>
+          </material-card>
         </StackLayout>
         <home-fab class="top right"></home-fab>
       </GridLayout>

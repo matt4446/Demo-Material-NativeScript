@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Directive, Input, Output, EventEmitter, ContentChildren } from "@angular/core";
 import { CardView } from "cardview";
+import { MaterialCardHeader } from "./card.header.component";
 import { Observable, Subscription, Subject} from 'rxjs/Rx';
 
 import { registerElement, ViewClass } from "nativescript-angular/element-registry";
@@ -7,6 +8,7 @@ registerElement("CardView", () => require("nativescript-cardview").CardView);
 
 @Component({
     selector: "material-card",
+    directives: [MaterialCardHeader],
     //templateUrl: "controls/list/list.html",
     template:`
     <CardView #item shadowColor="#FE00FC" elevation="10" margin="10">
