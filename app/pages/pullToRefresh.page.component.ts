@@ -1,24 +1,28 @@
 import {Component} from '@angular/core';
-import {MaterialCard} from "../controls/card.component";
 import {PullToRefresh} from "nativescript-pulltorefresh";
 import {ROUTER_DIRECTIVES, Router, OnActivate, OnDeactivate, CanReuse, OnReuse,
  RouteParams, ComponentInstruction, RouteConfig } from '@angular/router-deprecated';
-
+import {MATERIAL_DIRECTIVES} from "../controls/material";
+import {HomeFab} from "./templates/home-fab";
 @Component({
   selector: 'Start',
-  directives: [MaterialCard, ROUTER_DIRECTIVES],
+  directives: [HomeFab, MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES],
   template: `
-    <StackLayout class='padding'>
-        <Label text='Pull image to refresh'></Label>
-        
-        <PullToRefresh (refresh)="refreshPage($event)">
-            <ScrollView>
-                <StackLayout>
-                   <img [src]="RandomImage" stretch ="none"> 
-                </StackLayout>
-            </ScrollView>
-        </PullToRefresh>
-    </StackLayout>
+    <GridLayout rows="" columns="">
+        <StackLayout class='padding'>
+            <Label text='Pull image to refresh'></Label>
+
+            <PullToRefresh (refresh)="refreshPage($event)">
+                <ScrollView>
+                    <StackLayout>
+                        <img [src]="RandomImage" stretch ="none"> 
+                    </StackLayout>
+                </ScrollView>
+            </PullToRefresh>
+        </StackLayout>
+        <home-fab></home-fab>
+    </GridLayout>
+    
   `
 })
 export class VanillaPullToRefreshPage  {

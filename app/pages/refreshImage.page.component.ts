@@ -5,28 +5,32 @@ import {Image} from "ui/image";
 import {PullToRefresh} from "nativescript-pulltorefresh";
 import {Color} from "color";
 //Page is a wrapper on @Component
-
+import {HomeFab} from "./templates/home-fab";
+import {MATERIAL_DIRECTIVES} from "../controls/material";
 @Component({
     selector: "RefreshImagePage",
     template: `
-        <StackLayout class="padding">
-
-            <material-card>
-                <StackLayout class='padding'>
-                    <Label text='pull down on the image'></Label>
-                    <label class="note" [text]="Message"></label>
-                </StackLayout>
-            </material-card> 
-            <material-card>
-                <StackLayout class='padding'>
-                    <material-pull-to-refresh (refresh)="refreshPage($event)">
-                        <img [src]="RandomImage" stretch ="none"> 
-                    </material-pull-to-refresh>
-                </StackLayout>
-            </material-card> 
-        </StackLayout>
+        <GridLayout rows="" columns="">
+            <StackLayout class="padding">
+                <material-card>
+                    <StackLayout class='padding'>
+                        <Label text='pull down on the image'></Label>
+                        <label class="note" [text]="Message"></label>
+                    </StackLayout>
+                </material-card> 
+                <material-card>
+                    <StackLayout class='padding'>
+                        <material-pull-to-refresh (refresh)="refreshPage($event)">
+                            <img [src]="RandomImage" stretch ="none"> 
+                        </material-pull-to-refresh>
+                    </StackLayout>
+                </material-card> 
+            </StackLayout>
+            <home-fab></home-fab>
+        </GridLayout>
+        
     `,
-    directives: [MaterialCard, MaterialPullToRefresh]
+    directives: [HomeFab, MATERIAL_DIRECTIVES]
 })
 export class RefreshImagePage
 {
